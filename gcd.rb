@@ -1,9 +1,17 @@
+# Máximo común divisor
 def gcd(u, v)
   u, v = u.abs, v.abs
-  while v == 0
+  while v != 0
+    #u = v % v
+    #v = u % v
     u, v = v, u % v
   end
   u
 end
 
-puts gcd(6,3)
+# Mínimo común múltiplo
+def mcm (u, v)
+  (u*v)/gcd(u,v)
+end
+
+#puts gcd(-30,-150)
